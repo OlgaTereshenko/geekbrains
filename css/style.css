@@ -22,16 +22,16 @@ body{
     background-color: var(--dark-blue);
 }
 
-.header__navigation {
+.header__navigation{
     display: none;
 }
 
-.container {
+.container{
     width: 1138px;
     margin: 0 auto;
 }
 
-.header__wrapper {
+.header__wrapper{
     display: flex;
     align-items: center;
     min-height: 75px;
