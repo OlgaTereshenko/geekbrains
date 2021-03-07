@@ -1,0 +1,159 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+
+        .cart__product{
+            display: flex;
+            flex-direction: column; 
+            margin: 96px 0 40px; 
+            min-height: 306px;
+            min-width: 652px;
+
+            .cart__product-check{
+                display: flex; 
+                box-shadow: 0.4em 0.4em 5px $light-silver;
+                
+
+            .cart__title:before{
+                content: '';
+                width: 18px;
+                height: 18px;
+                background: none;
+                position: absolute;
+                right: -150px;
+                background-image: url(/img/close.svg);
+            }
+        
+                .cart__name{
+                    display: flex;
+                    flex-direction: column; 
+                    
+                    .cart__title{
+                        @include font(24px, 29px);
+                        margin-bottom: 41px;
+                        float: right;
+                        margin: 22px 0 0 31px;
+                        text-transform: uppercase;
+                        position: relative;
+
+                        .cart__title-sub{
+                            display: block;
+                            margin-bottom: 42px;
+                        }
+                    }
+
+                    .cart__details{
+                        @include font(22px, 26px);
+                        color: $dark-grey;
+                        margin: 0 0 6px 31px;
+
+                        .cart__details--price{
+                        color: $dark-pink;
+                        }
+                    }
+                }
+            } 
+        }
+
+        .cart__buttons{
+            display: flex;
+            justify-content: space-between;
+            
+            .cart__button{
+                @include font(14px, 17px);
+                color: $black;
+                margin: 72px 0 128px;
+                padding: 16px 30px;
+                width: 235px;
+                height: 50px;
+                background-color: none;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            .cart__button-text{
+                text-decoration: none;
+                color: $black;
+            }
+        }
+
+    .cart__wrapper-form{
+        
+        .cart__form{
+            display: flex;
+            flex-direction: column;
+            margin:113px 0 57px;
+        
+            .cart__form-adress{
+                display: block;
+                margin-bottom: 22px;
+                width: 360px;
+                height: 45px;
+                border: 1px solid $grey-light;
+            }
+
+            .cart__form-title{
+                @include font(16px, 19px);
+                text-transform: uppercase;
+                margin-bottom: 22px;
+            }
+
+            .cart__form-button{
+                @include font(11px, 13px);
+                width: 100px;
+                height: 34px;
+                color: $grey-light;
+                border: 1px solid $grey-light;
+                background-color: none;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+
+        .cart__checkout{
+            min-width: 360px;
+            min-height: 214px;
+            background-color: $silver;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 57px;
+
+            .cart__check{
+                display: flex;
+                justify-content: flex-end;
+
+                .cart__checkout-sub{
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    @include font(11px, 13px);
+                    text-transform: uppercase;
+                    margin: 39px 34px 0;
+                }
+
+                .cart__checkout-grand{
+                    @include font(16px, 19px);
+                    text-transform: uppercase;
+                    margin: 12px 34px 40px;
+                }
+            }
+            .cart__checkout-but{
+                @include flex-center();
+                    
+                .cart__checkout-button{
+                    @include font(16px, 19px);
+                    width: 273px;
+                    height: 50px;
+                    color: $white;
+                    background: $dark-pink;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border: 1px solid $black;
+                }
+            }
+        }
+    
+    }
+}
+
+
+
