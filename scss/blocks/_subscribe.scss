@@ -1,25 +1,43 @@
 .subscribe{
     background-image: url(../img/subscribe.jpg);
+    background-size: cover;
     min-height: 448px;
     @include flex-center();
 
     &__appeal{
         @include flex-center();
         flex-direction: column;
-    }
+        }
+    
 
     &__appeal-woman{
         @include font(20px, 24px);
         color: $black;
-        width: 360px;
-        height: 99px;
+        max-width: 360px;
+        max-height: 99px;
         text-align: center;
         margin: 20px 0;
+
+        @include mobile{
+            @include font(18px, 21px);
+            margin: 20px 0 59px;
+        }
+        @include tablet{
+            margin: 0 0 48px;
+        }
     }
 
     &__connect{
         display: flex;
         justify-content: space-between;  
+
+        @include tablet{
+            flex-direction: column;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__connecting{
@@ -41,10 +59,26 @@
         width: 400;
         margin: 15px 0 32px;
         text-transform: uppercase;
+
+        @include mobile{
+            @include font(14px, 21px);
+            margin: 0 0 22px;
+        }
     }
 
     &__form{
         display: flex;
+
+        @include tablet{
+            justify-content: center;
+            margin: 0 0 140px;
+        }
+
+        @include mobile {
+            justify-content: center;
+            margin: 0 0 110px;
+        }
+        
     }
 
     &__input{
@@ -69,3 +103,14 @@
     }
 }
 
+.subscribe__img {
+    @include mobile{
+        width: 138px;
+        height: 144px;
+        margin: 54px 0 0;
+    }
+
+    @include tablet{
+        margin: 54px 0 0;
+    }
+}

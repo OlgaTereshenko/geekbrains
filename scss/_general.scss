@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-    width: 1138px;
+    width: 71%;
     margin: 0 auto;
 }
 
@@ -26,4 +26,10 @@ body{
     @include font(13px, 16px);
     padding-left: 16px;
     color: $grey-light;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 96%;
+    }
 }

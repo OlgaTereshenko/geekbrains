@@ -11,6 +11,13 @@
 
 .product__shop{
     @include font(14px, 17px);
+
+    @include tablet{
+        margin: 0 0 73px;
+    }
+    @include mobile{
+        margin: 0 0 64px;
+    }
 }
 
 .product__cards {
@@ -19,6 +26,9 @@
     justify-content: space-between;
     margin: 57px 0 48px 0;
 
+    @include tablet{
+        margin: 0 0 32px;
+    }
 
 }
 .product__cards-item{
@@ -26,6 +36,10 @@
     min-height: 420px;
     margin-bottom: 30px;
     background-color: $grey;
+
+    @include tablet{
+        margin: 0 0 18px;
+    }
 }
 
 .product__name{
@@ -52,6 +66,10 @@
     width: 211px;
     height: 47px;
     margin: 0 auto 95px;
+
+    @include tablet{
+        margin: 0 auto 79px;
+    }
 }
 
 .product__button:hover,
