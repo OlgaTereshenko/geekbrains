@@ -1,0 +1,71 @@
+.subscribe{
+    background-image: url(../img/subscribe.jpg);
+    min-height: 448px;
+    @include flex-center();
+
+    &__appeal{
+        @include flex-center();
+        flex-direction: column;
+    }
+
+    &__appeal-woman{
+        @include font(20px, 24px);
+        color: $black;
+        width: 360px;
+        height: 99px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    &__connect{
+        display: flex;
+        justify-content: space-between;  
+    }
+
+    &__connecting{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    &__subscribe{
+        font-size: 24px;
+        width: 700;
+        text-transform: uppercase;
+    }
+
+    &__text{
+        font-size: 24px;
+        width: 400;
+        margin: 15px 0 32px;
+        text-transform: uppercase;
+    }
+
+    &__form{
+        display: flex;
+    }
+
+    &__input{
+        border: none;
+        width: 335px;
+        height: 49px;
+        background: $silver;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &__button{
+        border: none;
+        width: 120px;
+        height: 51px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: $dark-pink;
+        color: $white;
+        @include font(14px, 17px);
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,113 @@
+.regisrtation__pages{
+    background: $pink;
+    min-height: 148px;
+}
+
+.regisrtation__title{
+    @include font(24px, 29px);
+    color: $dark-pink;
+    text-transform: uppercase;
+    padding: 60px 0;
+}
+
+.regisrtation{
+    display: flex;
+    justify-content: space-between;
+    min-height: 645px;
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+        width: 100%;
+
+        .form-name{
+            display: block;
+            min-width: 359px;
+            min-height: 44px;
+            margin-bottom: 20px;
+        }
+
+        .form-title{
+            @include font(16px, 19px, 300);
+            margin: 0 0 20px;
+        }
+
+        .registration__button{
+            position: relative;
+            border: none;
+            width: 167px;
+            height: 60px;
+            background: $dark-pink;
+            color: $white;
+            text-transform: uppercase;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+    }
+         
+    &__description {
+            display: inline-block;
+            @include font(13px, 16px, 300);
+            width: 359px;
+            color: $grey-light;
+    }
+
+    &__radio{
+        padding-bottom: 35px;
+
+        .radio-label{
+            @include font(11px, 13px, 300);
+            padding-right: 20px;
+        }
+    }
+}
+.registration__info{
+    width: 100%;
+
+    .registration__info-header{
+         @include font(24px, 29px, 300);
+        color: $black;
+        margin: 64px 0 22px;
+        text-transform: uppercase;
+    }
+
+    .registration__info-text {
+        @include font(24px, 29px, 300);
+        color: $black;
+        margin-bottom: 21px;
+    }
+
+    .registration__info-list{
+        list-style: none;
+
+        .item {
+            position: relative;
+            padding: 0 0 16px 46px;
+            @include font(24px, 29px, 300);
+            color: $black;
+        }
+
+        .item:before {
+            content: '';
+            width: 20px;
+            height: 16px;
+            background: none;
+            position: absolute;
+            left: 0;
+             background-image: url(../img/check.png);
+            background-size: 20px 16px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+  
+
+
