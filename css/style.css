@@ -1,12 +1,17 @@
-:root {
+:root {/* Цвета почему-то немного отличаются от тех, что на макете */
 --dark-blue: #222222;
+--blue:  rgb(113, 174, 235);
 --dark-pink: #F16D7F;
 --pink: #F1E4E6;
 --brown: #474040;
---white: #FFFFFF;
 --grey:  #F8F8F8;
 --dark-grey: #5D5D5D;
 --black: #222224;
+--red: rgb(212, 40,40);
+--white: #f1f1f1;
+--light-grey: #6F6E6E;
+--grey-light: #B1B1B1;
+--silver: #E1E1E1;
 
 }
 
@@ -22,16 +27,16 @@ body{
     background-color: var(--dark-blue);
 }
 
-.header__navigation {
+.header__navigation{
     display: none;
 }
 
-.container {
+.container{
     width: 1138px;
     margin: 0 auto;
 }
 
-.header__wrapper {
+.header__wrapper{
     display: flex;
     align-items: center;
     min-height: 75px;
@@ -43,6 +48,69 @@ body{
     background-color: transparent;
     border: none;
     margin: 0 32px 0 0;
+    cursor: pointer;
+}
+
+.header__button-icon{
+    fill: var(--white);
+}
+
+.header__button:hover .header__button-icon,
+.header__button:focus .header__button-icon {
+  fill: var(--dark-pink);
+}
+ 
+.header{
+    position: relative;
+}   
+
+.header__navigation{
+    position: absolute;
+    display: none;
+    width: 232px;
+    min-height: 764px;
+    margin-top: 21px;
+    background: var(--white);
+    z-index: 1;
+}
+
+.header__navigation-list{
+    list-style: none;
+}
+
+.header__navigation-link{
+    padding: 0 0 12px;
+   
+}
+
+.header__link-text{
+    color: var(--light-grey);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 17px;
+    width: 400;
+    margin: 0 0 0 54px;
+}
+
+.header__list{
+    font-size: 14px;
+    line-height: 17px;
+    width: 400;
+    color: var(--dark-pink);
+    margin: 20px 0 20px 33px;
+    text-transform: uppercase;
+}
+.header__list--menu {
+    color: var(--black);
+}
+
+.header__button:hover + .header__navigation{
+    display: block; /*не получилось зафиксировать меню, чтобы не исчезало после того, как уберу курсор с кнопки*/
+}
+
+.header__navigation:hover{
+    display: block;
+    justify-content: flex-end; /*Не получилось расположить меню в правой части страницы... Может, не туда вставила jc:flex-end?*/
 }
 
 .header__person {
@@ -58,10 +126,12 @@ body{
     margin: 0 0 63px 0;
 }
 
+
 .brand__title{
     font-weight: 900;
     font-size: 48px;
     line-height: 58px;
+    text-transform: uppercase;
 }
 
 .brand__title-wrapper{
@@ -70,6 +140,18 @@ body{
     flex-grow: 1;
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.brand__title-wrapper:before{
+    content: '';
+    width: 12px;
+    height: 92px;
+    background: none;
+    position: absolute;
+    left: 64px;
+    background-image: url(../img/decor.svg);
+
 }
 
 .brand__subtitle{
@@ -127,7 +209,7 @@ body{
   }
 
   .offers__item--accesories {
-    background-image: url(../img/accesories.jpg);
+    background-image: url(../img/accesories.jpg); /*почему-то картинка снизу немного задвоилась*/
     width: 100%;
 }
 
@@ -184,6 +266,7 @@ body{
     line-height: 16px;
     width: 400;
     margin: 25px 0 13px 16px;
+    text-transform: uppercase;
 }
 
 .product__description{
@@ -207,11 +290,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white);
+    background-color: none;
     width: 211px;
     height: 47px;
     margin: 0 auto 95px;
+}
 
+.product__button:hover,
+.product__button:focus,
+.product__button:active{
+    background-color: var(--dark-pink);
 }
 
 .product__button-text{
@@ -221,6 +309,12 @@ body{
     color:var(--dark-pink);
     font-size: 16px;
     line-height: 19px;
+}
+
+.product__button-text:hover,
+.product__button-text:focus,
+.product__button-text:active{
+color: var(--white);
 }
 
 .advantages{
@@ -256,7 +350,7 @@ body{
 }
 
 .subscribe{
-    background-image: url(../img/photo\ subscribe.jpg);
+    background-image: url(../img/photo\ subscribe.jpg); /*картинка справа как будто обрезалась и появилась часть горы. А на макете такого нет*/
     min-height: 448px;
     display: flex;
     justify-content: center;
@@ -295,12 +389,39 @@ body{
 .subscribe__subscribe{
     font-size: 24px;
     width: 700;
+    text-transform: uppercase;
 }
 
 .subscribe__text{
     font-size: 24px;
     width: 400;
-    margin: 0 0 32px;
+    margin: 15px 0 32px;
+    text-transform: uppercase;
+}
+
+.subscribe__form{
+    display: flex;
+}
+
+.subscribe__input{
+    border: none;
+    width: 335px;
+    height: 49px;
+    background: var(--silver);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.subscribe__button{
+    border: none;
+    width: 120px;
+    height: 51px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--dark-pink);
+    color: var(--white);
+    font-size: 14px;
+    line-height: 17px;
 }
 
 .footer{
@@ -323,4 +444,179 @@ body{
 
 .footer__connect{
     display: flex;
+}
+
+/*не понимаю,как изменить одновременно и цвет фона, и цвет картинки внутри для иконки instagram (и других). Получилось изменить только фон*/
+
+.footer__icon{ 
+    fill: var(--black);
+}
+  .footer__insta-icon{ 
+    fill: var(--white) ;
+}
+
+.footer__insta-icon:hover,
+.footer__insta-icon:focus {
+    fill: var(--dark-pink);
+} 
+
+.footer__facebook-icon{ 
+    fill: var(--white);
+}
+
+.footer__facebook-icon:hover,
+.footer__facebook-icon:focus{
+    fill: var(--blue);
+}  
+
+.footer__pinterest-icon{
+    fill: var(--white);
+}
+
+.footer__pinterest-icon:hover,
+.footer__pinterest-icon:focus{
+    fill: var(--red);
+}
+
+.footer__twitter-icon{
+    fill: var(--white);
+}
+
+.footer__twitter-icon:hover,
+.footer__twitter-icon:focus{
+    fill: var(--blue);
+}  
+
+.regisrtation__pages{
+    background: var(--pink);
+    min-height: 148px;
+}
+
+.regisrtation__title{
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--dark-pink);
+    text-transform: uppercase;
+    padding: 60px 0;
+}
+
+.regisrtation{
+    display: flex;
+    justify-content: space-between;
+    min-height: 645px;
+} 
+
+.registration__info-list{
+    list-style: none;
+}
+
+.item {
+    position: relative;
+    padding: 0 0 16px 46px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black);
+  }
+
+  .item:before {
+    content: '';
+    width: 20px;
+    height: 16px;
+    background: none;
+    position: absolute;
+    left: 0;
+    background-image: url(../img/check.png);
+    background-size: 20px 16px;
+  }
+  
+  .regisrtation__form{
+      display: flex;
+      flex-direction: column;
+      margin-top: 64px;
+      width: 100%;
+  }
+
+.regisrtation__info{
+    width: 100%;
+}
+
+  .form-name{
+    display: block;
+    min-width: 359px;
+    min-height: 44px;
+    margin-bottom: 20px;
+  }
+
+::placeholder{
+    font-size: 13px;
+    line-height: 16px;
+    padding-left: 16px;
+    color: var(--grey-light);
+}
+  .form-title{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 20px;
+  }
+
+  .radio-label{
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    padding-right: 20px;
+    
+  }
+
+  .regisrtation__radio{
+      padding-bottom: 35px;
+  }
+
+   .regisrtation__description {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    width: 359px;
+    color: var(--grey-light);
+  } 
+
+  .registration__info-header{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black);
+    margin: 64px 0 22px;
+    text-transform: uppercase;
+  }
+
+
+  .registration__info-text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black);
+    margin-bottom: 21px;
+  }
+
+.registration__button{
+    position: relative;
+    border: none;
+    width: 167px;
+    height: 60px;
+    background: var(--dark-pink);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.registration__button:after{ 
+    content: '';
+    width: 20px;
+    height: 10px;
+    background: none;
+    position: absolute;
+    background-image: url(../img/vector.png);
+    right: 1,5px; /* Не получилось корректно расположить стрелочку на кнопке */
 }
