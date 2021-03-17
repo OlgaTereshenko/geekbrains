@@ -32,11 +32,21 @@
 
 }
 
-// .products__overlay {
+// .product-overlay:before,
+// .product__button-cart {
+//   display: none;
+// }
+
+// .product__cards-item:hover .product-overlay:before,
+// .product__cards-item:hover .product__button-cart {
+//   display: block;
+// }
+
+// .product-overlay {
 //     position: relative;
 // }
 
-// .products__button-cart {
+// .product__button-cart {
 //     display: none;
 //     position: absolute;
 //     top: 50%;
@@ -59,7 +69,7 @@
 //     position: absolute;
 //     left: 13px;
 //     top: 9px;
-// } Здесь делала overlay. Не работает((
+// } 
 
 .product__cards-item{
     width: 360px;
