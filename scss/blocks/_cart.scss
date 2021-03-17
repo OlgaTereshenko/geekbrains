@@ -2,23 +2,23 @@
     display: flex;
     justify-content: space-between;
 
-    @include mobile{
+    @include mobile {
         flex-direction: column;
     }
 
-        .cart__product{
+        .cart__product {
             display: flex;
             flex-direction: column; 
             margin: 96px 0 40px; 
             min-height: 306px;
             min-width: 652px;
 
-            .cart__product-check{
+            .cart__product-check {
                 display: flex; 
                 box-shadow: 0.4em 0.4em 5px $light-silver;
                 
 
-            .cart__title:before{
+            .cart__title:before {
                 content: '';
                 width: 18px;
                 height: 18px;
@@ -28,11 +28,11 @@
                 background-image: url(/img/close.svg);
             }
         
-                .cart__name{
+                .cart__name {
                     display: flex;
                     flex-direction: column; 
                     
-                    .cart__title{
+                    .cart__title {
                         @include font(24px, 29px);
                         margin-bottom: 41px;
                         float: right;
@@ -46,12 +46,12 @@
                         }
                     }
 
-                    .cart__details{
+                    .cart__details {
                         @include font(22px, 26px);
                         color: $dark-grey;
                         margin: 0 0 6px 31px;
 
-                        .cart__details--price{
+                        .cart__details--price {
                         color: $dark-pink;
                         }
                     }
@@ -59,11 +59,11 @@
             } 
         }
 
-        .cart__buttons{
+        .cart__buttons {
             display: flex;
             justify-content: space-between;
             
-            .cart__button{
+            .cart__button {
                 @include font(14px, 17px);
                 color: $black;
                 margin: 72px 0 128px;
@@ -75,24 +75,24 @@
                 cursor: pointer;
             }
 
-            .cart__button-text{
+            .cart__button-text {
                 text-decoration: none;
                 color: $black;
             }
         }
-.cart__wrapper-product{
+.cart__wrapper-product {
     width: 58%;
 }
-    .cart__wrapper-form{
+    .cart__wrapper-form {
         width: 42%;
         padding: 0 0 0 128px;
         
-        .cart__form{
+        .cart__form {
             display: flex;
             flex-direction: column;
             margin:113px 0 57px;
         
-            .cart__form-adress{
+            .cart__form-adress {
                 display: block;
                 margin-bottom: 22px;
                 width: 360px;
@@ -100,13 +100,13 @@
                 border: 1px solid $grey-light;
             }
 
-            .cart__form-title{
+            .cart__form-title {
                 @include font(16px, 19px);
                 text-transform: uppercase;
                 margin-bottom: 22px;
             }
 
-            .cart__form-button{
+            .cart__form-button {
                 @include font(11px, 13px);
                 width: 100px;
                 height: 34px;
@@ -118,7 +118,7 @@
             }
         }
 
-        .cart__checkout{
+        .cart__checkout {
             min-width: 360px;
             min-height: 214px;
             background-color: $silver;
@@ -126,11 +126,11 @@
             flex-direction: column;
             margin-bottom: 57px;
 
-            .cart__check{
+            .cart__check {
                 display: flex;
                 justify-content: flex-end;
 
-                .cart__checkout-sub{
+                .cart__checkout-sub {
                     display: inline-flex;
                     justify-content: flex-end;
                     @include font(11px, 13px);
@@ -138,16 +138,16 @@
                     margin: 39px 34px 0;
                 }
 
-                .cart__checkout-grand{
+                .cart__checkout-grand {
                     @include font(16px, 19px);
                     text-transform: uppercase;
                     margin: 12px 34px 40px;
                 }
             }
-            .cart__checkout-but{
+            .cart__checkout-but {
                 @include flex-center();
                     
-                .cart__checkout-button{
+                .cart__checkout-button {
                     @include font(16px, 19px);
                     width: 273px;
                     height: 50px;
@@ -156,7 +156,15 @@
                     text-transform: uppercase;
                     cursor: pointer;
                     border: 1px solid $black;
+                    transition: border-radius 1s, background-color 1s;
+
+                    &:hover {
+                        border-radius: 30px;
+                        background-color: $grey-light;
+                        border: none;
+                    }
                 }
+
             }
         }
     
