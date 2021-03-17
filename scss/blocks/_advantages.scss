@@ -1,9 +1,24 @@
 .advantages{
     background-color: $black;
 
+    &__info{
+        @include tablet{
+            padding: 24px 0 43px;
+        }
+
+        @include mobile {
+            padding: 24px 0 43px;
+        }
+    }
+
     &__list{
         display: flex;
         justify-content: space-between;
+
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__item{
@@ -11,6 +26,12 @@
         justify-content: center;
         text-align: center;
         margin: 103px 0;
+
+        @include tablet{
+            max-width: 360px;
+            padding: 24px 0;
+            margin: 0;
+        }
 
     }
 

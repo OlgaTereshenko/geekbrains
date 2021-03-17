@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include mobile{
+        flex-direction: column;
+    }
+
         .cart__product{
             display: flex;
             flex-direction: column; 
@@ -76,8 +80,12 @@
                 color: $black;
             }
         }
-
+.cart__wrapper-product{
+    width: 58%;
+}
     .cart__wrapper-form{
+        width: 42%;
+        padding: 0 0 0 128px;
         
         .cart__form{
             display: flex;
