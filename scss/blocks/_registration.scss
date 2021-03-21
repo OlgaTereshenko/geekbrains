@@ -67,8 +67,11 @@
             text-transform: uppercase;
             margin-top: 40px;
             cursor: pointer;
+
+            &:hover{
+                transform: translateX(10px) rotate(-10deg) translateY(5px);
+            }
         }
-    }
          
     &__description {
             display: inline-block;
@@ -157,14 +160,4 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-  
-
-
+}

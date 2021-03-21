@@ -102,6 +102,11 @@
     height: 47px;
     margin: 0 auto 64px;
     position: relative;
+    padding: 12px 14px;
+    text-decoration: none;
+    text-align: center;
+    color:$dark-pink;
+    @include font(16px, 19px);
 
     @include tablet{
         margin: 0 auto 79px;
@@ -118,15 +123,8 @@
     top: 9px;
 }
 
-
-
-
-.description__button-text{
-    padding: 12px 14px;
-    text-decoration: none;
-    text-align: center;
-    color:$dark-pink;
-    @include font(16px, 19px);
+.description__button:hover{
+box-shadow: 0 0 10px 0 $dark-pink;
 }
 
 .product__card {
@@ -139,11 +137,23 @@
     }
 }
 
+.product__cards-item{
+    width: 31%;
+    min-height: auto;
+
+    @include tablet {
+       width: 48%;
+    }
+}
+
+.product__cards-img {
+    width: 100%;
+    height: auto;
+}
+
 .product__cards-item--none{
-        width: 360px;
-        min-height: 420px;
-        margin-bottom: 30px;
-        background-color: $grey;
+    margin-bottom: 30px;
+    background-color: $grey;
     
     @include tablet {
         display: none;
