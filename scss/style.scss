@@ -2,15 +2,16 @@
 @import './variables';
 @import './mixins';
 @import './general';
+@import './bootstrap';
 @import './blocks/header';
-@import './blocks/brand';
-@import './blocks/offers';
-@import './blocks/product';
-@import './blocks/advantages';
+@import './blocks/index-brand';
+@import './blocks/index-offers';
+@import './blocks/index-product';
+@import './blocks/index-advantages';
 @import './blocks/subscribe';
 @import './blocks/footer';
 @import './blocks/registration';
 @import './blocks/cart';
-@import './blocks/description';
-@import './blocks/carousel';
-
+@import './blocks/product-description';
+@import './blocks/product-carousel';
+@import './blocks/catalog';

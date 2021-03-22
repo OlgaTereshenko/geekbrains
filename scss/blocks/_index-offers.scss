@@ -1,5 +1,5 @@
 
-  .offers__list{
+  .offers__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     }
   }
 
-  .offers__item{
+  .offers__item {
     width: 32%;
     min-height: 260px;
     background-color: $brown;
@@ -22,10 +22,11 @@
     @include tablet {
        min-height: 167px;
     }
-     @include mobile{
-         padding: 0 0 32px;
-         width: 100%;
-     }
+
+     @include mobile {
+        padding: 0 0 32px;
+        width: 100%;
+    }
 
     &--woman {
         background-image: url(../img/woman-img.jpg);
@@ -44,7 +45,6 @@
         width: 100%;
         background-size: cover;
     }
-
 }  
    
    .offers__item-text {
@@ -55,9 +55,4 @@
     .offers__item-for {
         @include font(24px, 29px, 700);
         color: $dark-pink;
-      
     }
-
- 
-
- 
