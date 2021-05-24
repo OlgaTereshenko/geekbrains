@@ -1,16 +1,16 @@
-.subscribe{
+.subscribe {
     background-image: url(../img/subscribe.jpg);
     background-size: cover;
     min-height: 448px;
     @include flex-center();
 
-    &__appeal{
+    &__appeal {
         @include flex-center();
         flex-direction: column;
         }
     
 
-    &__appeal-woman{
+    &__appeal-woman {
         @include font(20px, 24px);
         color: $black;
         max-width: 360px;
@@ -18,20 +18,21 @@
         text-align: center;
         margin: 20px 0;
 
-        @include mobile{
+        @include mobile {
             @include font(18px, 21px);
             margin: 20px 0 59px;
         }
-        @include tablet{
+
+        @include tablet {
             margin: 0 0 48px;
         }
     }
 
-    &__connect{
+    &__connect {
         display: flex;
         justify-content: space-between;  
 
-        @include tablet{
+        @include tablet {
             flex-direction: column;
         }
 
@@ -40,36 +41,35 @@
         }
     }
 
-    &__connecting{
+    &__connecting {
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
     }
 
-    &__subscribe{
+    &__subscribe {
         font-size: 24px;
         width: 700;
         text-transform: uppercase;
     }
 
-    &__text{
+    &__text {
         font-size: 24px;
         width: 400;
         margin: 15px 0 32px;
         text-transform: uppercase;
 
-        @include mobile{
+        @include mobile {
             @include font(14px, 21px);
             margin: 0 0 22px;
         }
     }
 
-    &__form{
+    &__form {
         display: flex;
 
-        @include tablet{
+        @include tablet {
             justify-content: center;
             margin: 0 0 140px;
         }
@@ -78,10 +78,9 @@
             justify-content: center;
             margin: 0 0 110px;
         }
-        
     }
 
-    &__input{
+    &__input {
         border: none;
         width: 335px;
         height: 49px;
@@ -90,7 +89,7 @@
         border-bottom-left-radius: 10px;
     }
 
-    &__button{
+    &__button {
         border: none;
         width: 120px;
         height: 51px;
@@ -110,7 +109,7 @@
         margin: 54px 0 0;
     }
 
-    @include tablet{
+    @include tablet {
         margin: 54px 0 0;
     }
 }

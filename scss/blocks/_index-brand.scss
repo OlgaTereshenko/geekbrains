@@ -2,11 +2,11 @@
     display: flex;
     margin: 0 0 63px 0;
 
-    @include tablet{
+    @include tablet {
         margin: 0 0 20px 0;
     }
 
-    &__img{
+    &__img {
         width: 50%;
         height: auto;
 
@@ -50,7 +50,7 @@
         left: 64px;
         background-image: url(../img/decor.svg);
 
-        @include mobile{
+        @include mobile {
             height: 61px;
         }
     }
@@ -63,7 +63,7 @@
             @include font(24px, 29px, 700);
         }
 
-        @include mobile{
+        @include mobile {
             @include font(20px, 24px, 700);
         }
     }
@@ -71,7 +71,6 @@
     &__subtitle-pink {
         color: $dark-pink;
     }
-
 }
 
 

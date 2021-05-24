@@ -1,13 +1,13 @@
-.product-photo{
+.product-photo {
     background-color: #F7F7F7;
     display: flex;
     justify-content: center;
 }
 
-.carousel{
+.carousel {
     margin: 10px 0 65px;
 }
-.fa-chevron-left::before{
+.fa-chevron-left::before {
     color: $black;
     width: 12px;
     height: 22px;
@@ -17,7 +17,7 @@
     position: absolute;
 }
 
-.fa-chevron-right::before{
+.fa-chevron-right::before {
     color: $dark-pink;
     width: 12px;
     height: 22px;
@@ -27,14 +27,14 @@
     position: absolute;
 }
 
-.fas{
+.fas {
     width: 46px;
     height: 46px;
     background-color: $grey-light;
     position: relative;
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     display: flex;
     justify-content: flex-start; 
     margin-top: 530px;
@@ -43,7 +43,7 @@
     z-index: 1;
 }
 
-.carousel-control-next{
+.carousel-control-next {
     display: flex;
     justify-content: flex-end; 
     margin-top: 530px;
